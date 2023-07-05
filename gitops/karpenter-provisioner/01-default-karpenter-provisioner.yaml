@@ -26,7 +26,7 @@ spec:
       values: ["t"]
     - key: "karpenter.k8s.aws/instance-cpu"
       operator: In
-      values: ["2", "4"]
+      values: ["2"]
     - key: "kubernetes.io/arch"
       operator: In
       values: ["amd64"]
@@ -35,8 +35,8 @@ spec:
       values: ["on-demand"]
   limits:
     resources:
-      cpu: 4 # CPU Cores across all instances
-      memory: 4Gi
+      cpu: 1930m # CPU Cores across all instances
+      memory: 3246Mi
     
   # Enables consolidation which attempts to reduce cluster cost by both removing un-needed nodes and down-sizing those
   # that can't be removed.  Mutually exclusive with the ttlSecondsAfterEmpty parameter.
